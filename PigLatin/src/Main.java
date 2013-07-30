@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class Main {
@@ -8,7 +8,11 @@ public class Main {
 	public static void main(String[] args) {
 		String phrase = getInput("What would you like to translate?");
 		String[] parsed = phrase.split(" ");
-
+		
+		System.out.println(translate(parsed));
+		
+	}
+	private static String translate(String[] parsed) {
 		ArrayList<Character> vowels = new ArrayList<Character>();
 		vowels.add('a');
 		vowels.add('e');
@@ -23,11 +27,6 @@ public class Main {
 		punc.add(';');
 		punc.add(':');
 		
-		System.out.println(translate(parsed, vowels, punc));
-		
-	}
-	private static String translate(String[] parsed, ArrayList<Character> vowels, 
-			ArrayList<Character> punc) {
 		ArrayList<Character> word = new ArrayList<Character>();
 		StringBuilder transString = new StringBuilder();
 		char tempPunc = '.';

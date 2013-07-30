@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
+
 public class CalculatorTwo {
 
 	public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class CalculatorTwo {
 				exit = true;
 				break;
 			default:
-
+	
 				try {
 					if (input.contains("+")) {
 						nums = input.split("\\+");
@@ -44,19 +45,22 @@ public class CalculatorTwo {
 				break;
 			}
 		}
-
+	
 		
 	}
-	private static String getInput(String prompt){
-		BufferedReader stdin = new BufferedReader(
-				new InputStreamReader(System.in));
-		
-		System.out.print(prompt);
-		System.out.flush();
-		try {
-			return stdin.readLine();
-		} catch (IOException e) {
-			return "Error: " + e.getMessage();
-		}
+
+private static String getInput(String prompt){
+	BufferedReader stdin = new BufferedReader(
+			new InputStreamReader(System.in));
+	
+	System.out.print(prompt);
+	System.out.flush();
+	try {
+		return stdin.readLine();
+	} catch (IOException e) {
+		return "Error: " + e.getMessage();
 	}
 }
+}
+
+
